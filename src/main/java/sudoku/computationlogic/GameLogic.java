@@ -38,7 +38,7 @@ public class GameLogic {
         else return false;
     }
 
-    private static boolean squaresAreInvalid(int[][] grid) {
+    public static boolean squaresAreInvalid(int[][] grid) {
         if (rowOfSquaresIsInvalid(Rows.TOP, grid)) return true;
         if (rowOfSquaresIsInvalid(Rows.MIDDLE, grid)) return true;
         if (rowOfSquaresIsInvalid(Rows.BOTTOM, grid)) return true;
@@ -86,7 +86,7 @@ public class GameLogic {
         return false;
     }
 
-    private static boolean columnsAreInvalid(int[][] grid) {
+    public static boolean columnsAreInvalid(int[][] grid) {
         for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
             List<Integer> row = new ArrayList<>();
             for (int yIndex = 0; yIndex < GRID_BOUNDARY; yIndex++) {
@@ -98,7 +98,7 @@ public class GameLogic {
         return false;
     }
 
-    private static boolean rowsAreInvalid(int[][] grid) {
+    public static boolean rowsAreInvalid(int[][] grid) {
         for (int yIndex = 0; yIndex < GRID_BOUNDARY; yIndex++) {
             List<Integer> row = new ArrayList<>();
             for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
